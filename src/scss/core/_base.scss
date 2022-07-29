@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  //transition: $transition-default;
+  //transition-property: background-color;
+}
+
+html {
+  font-family: $font-family-primary;
+  font-size: $base-font-size;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: $base-font-color;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  scroll-behavior: smooth;
+
+  @include content-scale($contentScale);
+
+  @include min-wide(laptop) {
+    @include scroll-small;
+  }
+}
+
+body {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-flow: column;
+
+  padding:  var(--header-height) 0 0;
+
+  background: var(--main-bg, $fill-color);
+
+  user-select: none;
+}
+
+a {
+  color: var(--link-color, currentColor);
+
+  text-decoration: none;
+
+  user-select: none;
+
+  transition: $transition-default;
+  transition-property: color;
+  cursor: pointer;
+
+  @include only-mouse {
+    &:hover {
+      color: var(--link-hover-color, $secondary);
+    }
+  }
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+mark {
+  color: currentColor;
+  background: unset;
+}
+
+p {
+  max-width: var(--p-max-width, unset);
+
+  margin: var(--p-margin, 0);
+
+  font-weight: var(--p-font-weight, normal);
+  font-size: var(--p-font-size, rem(16));
+  line-height: var(--p-line-height, 1.38);
+}
+
+*::selection {
+  background-color: $secondary;
+  color: $light;
+}
+
+.container {
+  position: var(--container-position, unset);
+
+  display: var(--container-block, flex);
+  align-items: var(--container-align-items, flex-start);
+  justify-content: var(--container-justify-content, flex-start);
+  flex-flow: var(--container-flex-flow, column);
+  gap: var(--container-gap, 0);
+
+  width: 100%;
+  height: 100%;
+  max-width: var(--container-limit, auto);
+
+  padding-right: var(--container-gutter, 0);
+  padding-left: var(--container-gutter, 0);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-height: 420px) {
+    @include phones-fit-max-evn(16px);
+  }
+}

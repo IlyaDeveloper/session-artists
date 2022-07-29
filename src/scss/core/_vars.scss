@@ -1,0 +1,178 @@
+//* Map size devices for media query
+$wideScreens: (
+  phonesSm: 340px,
+  phones: 480px,
+  phonesLg: 640px,
+  tablet: 768px,
+  laptop: 992px,
+  desktopSm: 1024px,
+  desktopMd: 1170px,
+  desktop: 1280px,
+  notebook: 1366px,
+  notebookLg: 1600px,
+  fullHD: 1800px,
+  retina: 2100px,
+  retina4k: 3656px,
+  retina5k: 5100px,
+  retina8k: 7600px
+);
+
+$contentScale: (
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(laptop),
+  //  scale: 89%
+  //),
+  (
+    direction: 'max-width',
+    wide: screens(phones),
+    scale: 92%
+  ), //(
+  //  direction: 'max-width',
+  //  wide: screens(phones),
+  //  scale: 80%
+  //),
+  //(
+  //  direction: 'min-width',
+  //  wide: screens(retina),
+  //  scale: 126%
+  //),
+);
+
+//* Main content && elements sizes
+$guides: false;
+$guidesBody: false;
+$guidesContainer: false;
+$guidesSideLine: true;
+$guidesContainerSpacer: true;
+$guidesContainerSpacerColor: rgba(lightgreen, 0.5);
+$guidesContainerOpacity: .6;
+$guidesCenter: true;
+$guides-color: #ff3e23;
+$guides-column: 12;
+
+$containerLimit: rem(1280);
+$containerOffset: calc(var(--container-gutter) * -1);
+$gutterSmall: var(--gutter-small, rem(8)) !default;
+$gutter: var(--gutter, rem(16)) !default;
+$gutterX2: var(--gutterX2, rem(20)) !default;
+$gutterX3: var(--gutterX3, rem(40)) !default;
+$gutterX4: var(--gutterX4, rem(80)) !default;
+$sectionSpacer: var(--section-spacer, rem(70)) !default;
+
+$radiusSmall: rem(3);
+$radius: rem(5);
+$radiusNormal: rem(10);
+$radiusLarge: rem(15);
+
+$themes-map: (
+  default:(
+    primary: #007163,
+    primary-light: #007163B2,
+    primary-lighten: #0071631A,
+    secondary: #1A2535,
+    tertiary: #A67C52,
+    tertiary-light:#A67C521A,
+    light: #ffffff,
+    light-dark:#F2F2F2,
+    border: #E8E8E8,
+    dark: #000000,
+    fill: #FFFCF6,
+    //error: #ff0024,
+    //warning: #fffb53,
+    //success: #00FFBC
+  )
+);
+
+$primary: var(--cl-primary);
+$primary-light: var(--cl-primary-light);
+$secondary: var(--cl-secondary);
+$tertiary: var(--cl-tertiary);
+$tertiary-light: var(--cl-tertiary-light);
+
+$light: var(--cl-light);
+$light-dark: var(--cl-light-dark);
+$dark: var(--cl-dark);
+
+$border-color: var(--cl-border);
+$fill-color:  var(--cl-fill);
+
+$gr-primary: linear-gradient(0deg, rgba(0, 113, 99, 0.7), rgba(0, 113, 99, 0.7));
+
+//* transitions && animations
+$transition-default: 0.44s linear !default;
+$transition-border: border-color $transition-default !default;
+$transition-shadow: box-shadow $transition-default !default;
+
+$transition-start-delay: var(--transition-start-delay, 1.8s);
+$transition-start-duration: var(--transition-start-duration, 1s);
+$global-animation-state: var(--gm-play-animation, paused);
+
+$transition-function: cubic-bezier(.2, .63, .59, .84); //cubic-bezier(0,.89,.36,1.22);
+$transition-function-card: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+$base-font-color: $dark !default;
+$base-font-size: 16px !default;
+
+$font-family-primary: 'Inter', sans-serif;
+$font-family-secondary: 'Oswald', sans-serif;
+
+// * shadows
+$sh-card-primary: var(--sh-card-primary, rem(6) rem(6) rem(16) rgba(138, 150, 163, 0.06));
+//* Icons
+$font-path: '../assets/fonts' !default;
+
+$icon-font-family: "session-artists-icons" !default;
+$icon-font-prefix: 'sai-';
+$icon-font-path: $font-path + '/#{$icon-font-family}' !default;
+
+$sai-arrow-left: "\e900";
+$sai-arrow-left1: "\e901";
+$sai-check: "\e902";
+$sai-close: "\e903";
+$sai-heart: "\e904";
+$sai-logo: "\e905";
+$sai-search: "\e906";
+$sai-soc-fb: "\e907";
+$sai-soc-inst: "\e908";
+$sai-soc-tw: "\e909";
+$sai-star: "\e90a";
+
+$icons-font-map: (
+  arrow-left: $sai-arrow-left,
+  arrow-left1: $sai-arrow-left1,
+  check: $sai-check,
+  close: $sai-close,
+  heart: $sai-heart,
+  logo: $sai-logo,
+  search: $sai-search,
+  soc-fb: $sai-soc-fb,
+  soc-inst: $sai-soc-inst,
+  soc-tw: $sai-soc-tw,
+  star: $sai-star
+);
+
+//* Scrolls
+$scroll-size: var(--scroll-size, rem(3));
+$scroll-border-radius: 0;
+$scroll-thumb-color: $border-color;
+$scroll-thumb-hover-color: $primary;
+$scroll-track-color: $light;
+$scroll-track-line: inset 0 0 0 0px $scroll-track-color;
+
+//* cursor
+$cursor-size: rem(30);
+$cursor-color: $secondary;
+$cursor-color-active: $primary;
+
+//* Loader
+$loader-size: rem(48);
+
+//* z-index
+$z-index-step: 10 !default;
+$z-index: (
+  start: 10,
+  middle: 50,
+  header: 100,
+  modal: 1000
+) !default;

@@ -1,0 +1,29 @@
+.footer {
+  --container-align-items: center;
+  --container-justify-content: space-between;
+  --container-flex-flow: row wrap;
+
+  text-align: center;
+
+
+  &__menu {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(50);
+  }
+
+  &__logo {
+    width: rem(156);
+    //height: rem(72);
+  }
+
+  &__copy {
+    //display: flex;
+    //    align-items: center;
+    //    justify-content: center;
+    padding: rem(14) 0;
+
+    border-top: rem(1) solid $border-color;
+  }
+
+}

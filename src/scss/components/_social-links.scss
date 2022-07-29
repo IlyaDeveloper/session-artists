@@ -1,0 +1,15 @@
+.social-links {
+  --container-align-items: center;
+  --container-justify-content: center;
+  --caption-margin: #{0 0 rem(30)};
+
+  &__links {
+    display: inline-flex;
+    gap: rem(20);
+  }
+
+  &__link {
+    color: $primary;
+    font-size: rem(40);
+  }
+}

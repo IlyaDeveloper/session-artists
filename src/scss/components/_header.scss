@@ -1,0 +1,40 @@
+.header {
+  --container-align-items: center;
+  --container-justify-content: space-between;
+  --container-flex-flow: row;
+  --link-hover-color: revert;
+  --in-transform-transform-start: translate(0, -10%);
+
+  --button-width: #{rem(165)};
+
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: z-index(header);
+
+  display: flex;
+  align-items: center;
+
+  padding: rem(20) 0;
+
+  min-height: var(--header-height);
+
+  border-bottom:rem(1) solid $light-dark;
+  background-color: transparent;
+
+  animation: 1.5s $transition-function-card 0s 1 forwards in-transform;
+
+  &__logo {
+    width: rem(156);
+    //height: rem(72);
+  }
+
+  &__right {
+    display: inline-flex;
+    gap: rem(30);
+  }
+
+  &__btns {
+    display: inline-flex;
+    gap: rem(30);
+  }
+}

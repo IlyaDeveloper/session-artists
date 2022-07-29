@@ -1,0 +1,55 @@
+.search {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: rem(362);
+  height: rem(45);
+
+  &__field {
+    width: 100%;
+    height: rem(45);
+
+    padding: 0 rem(45) 0 $gutterX2;
+
+    border: rem(1) solid $border-color;
+    border-radius: $radius;
+
+    @include only-mouse {
+      &:hover {
+        border-color: $primary;
+
+        + .search__button {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: rem(45);
+    height: rem(45);
+    aspect-ration: 50/50;
+
+    margin: auto auto auto rem(-45);
+
+    border: unset;
+    background: unset;
+
+    &:before {
+      @include pseudo-icon($sai-search, rem(20));
+    }
+
+    @include only-mouse {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

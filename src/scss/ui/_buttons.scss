@@ -1,0 +1,59 @@
+.button {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--button-width, auto);
+
+  min-height: var(--button-height, rem(45));
+  padding: var(--button-gutter-y, rem(8)) var(--button-gutter-x, rem(32));
+
+  font-weight: 600;
+  font-size: var(--button-size, rem(15));
+  color: var(--button-color, $light);
+  white-space: nowrap;
+
+  border-radius: var(--button-radius, $radius);
+  background: var(--button-fill, $primary);
+
+  transition: .5s linear;
+  transition-property: background-color, border-color, color, transform;
+  cursor: pointer;
+
+  &.--line {
+    color: $primary;
+    border: rem(1) solid var(--button-border-color, currentColor);
+    background: var(--button-fill, transparent);
+
+    &.--secondary {
+      background: var(--button-fill, rgba(0, 113, 99, 0.1));
+    }
+
+    &.--tertiary {
+      color: $tertiary;
+      background: var(--button-fill, rgba(166, 124, 82, 0.1));
+    }
+
+  }
+
+  @include only-mouse {
+    &:hover {
+      background: var(--button-fill-hover, $secondary);
+      color: var(--button-color-hover, $light);
+
+      &.--line {
+        color: $secondary;
+        border: rem(1) solid var(--button-border-color, $secondary);
+        background: var(--button-fill, transparent);
+      }
+
+    }
+
+    &:active {
+      transform: scale(0.85);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "session-artists",
+  "description": "Session Artists for your dream project",
   "version": "1.0.0",
   "keywords": [],
   "author": "Pashchuk Ilya",
@@ -12,13 +12,13 @@
     }
   },
   "scripts": {
-    "clean-dist": "rm -rf dist && mkdir dist",
-    "copy-img": "cp -vR src/assets/images ./dist",
-    "copy-data": "cp -r src/data.json dist",
-    "copy-assets": "cp -r src/assets/* dist",
-    "copy-poster": "cp -r src/assets/images/meta-img.jpeg dist",
+    "clean-dist": "rm -rf src/dist",
+    "copy-img": "cp -vR src/assets/images src/dist",
+    "copy-data": "cp -r src/data.json src/dist",
+    "copy-assets": "cp -r src/assets/* src/dist",
+    "copy-poster": "cp -r src/assets/images/meta-img.jpeg src/dist",
     "copy-files": "npm run copy-img & npm run copy-assets & npm run copy-data",
-    "copy-host-files": "cp -r src/assets/host/* ./dist",
+    "copy-host-files": "cp -r src/assets/host/* src/dist",
     "start": "npm run clean-dist && parcel src/pug/pages/*.pug --open",
     "build": "npm run clean-dist  && npm run copy-host-files && npm run copy-poster && parcel build src/pug/pages/*.pug"
   },
