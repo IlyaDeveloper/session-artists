@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  color: var(--logo-color, $secondary);
+
+  font-size: rem(28);
+  font-weight: 800;
+
+  svg {
+    width: fit-content;
+
+    path {
+      transition: $transition-default;
+    }
+  }
+  @include only-mouse {
+    &:hover {
+      --cl-secondary-light: #{$secondary}
+    }
+  }
+}

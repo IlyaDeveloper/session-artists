@@ -1,0 +1,9 @@
+@include font-face($font-family-primary, 'SF Pro Rounded Ultralight', $font-path + '/sf-pro-rounded/', 'SFProRoundedUltralight', 100, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Thin', $font-path +'/sf-pro-rounded/', 'SFProRoundedThin', 200, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Light', $font-path + '/sf-pro-rounded/', 'SFProRoundedLight', 300, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Regular', $font-path + '/sf-pro-rounded/', 'SFProRoundedRegular', 400, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Medium', $font-path + '/sf-pro-rounded/', 'SFProRoundedMedium', 500, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Semibold', $font-path + '/sf-pro-rounded/', 'SFProRoundedSemibold', 600, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Bold', $font-path + '/sf-pro-rounded/', 'SFProRoundedBold', 700, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Heavy', $font-path + '/sf-pro-rounded/', 'SFProRoundedHeavy', 800, normal, "modern");
+@include font-face($font-family-primary, 'SF Pro Rounded Black', $font-path + '/sf-pro-rounded/', 'SFProRoundedBlack', 900, normal, "modern");

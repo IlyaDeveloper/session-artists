@@ -1,0 +1,28 @@
+.header {
+  --container-align-items: center;
+  --container-justify-content: space-between;
+  --container-flex-flow: row;
+  --link-hover-color: revert;
+  --in-transform-transform-start: translate(0, 150%);
+
+  position: fixed;
+  inset: auto 0 0;
+  z-index: z-index(header);
+
+  display: flex;
+  align-items: center;
+
+  padding: rem(8) 0;
+
+  min-height: var(--header-height);
+
+  background-color: $light;
+
+  animation: 1.5s $transition-function-card 0s 1 forwards in-transform;
+
+  &__logo {
+    width: rem(103.62);
+    height: rem(36.14);
+  }
+
+}

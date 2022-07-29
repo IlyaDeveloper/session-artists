@@ -1,0 +1,7 @@
+{
+  "extends": "@parcel/config-default",
+  "resolvers": [ "parcel-resolver-ignore", "@parcel/resolver-glob", "..."],
+    "optimizers": {
+      "*.js": ["@parcel/optimizer-esbuild"]
+    }
+}

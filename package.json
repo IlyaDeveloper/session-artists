@@ -1,0 +1,58 @@
+{
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Pashchuk Ilya",
+  "license": "ISC",
+  "source": "src/pug/pages/*.pug ",
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    }
+  },
+  "scripts": {
+    "clean-dist": "rm -rf dist && mkdir dist",
+    "copy-img": "cp -vR src/assets/images ./dist",
+    "copy-data": "cp -r src/data.json dist",
+    "copy-assets": "cp -r src/assets/* dist",
+    "copy-poster": "cp -r src/assets/images/meta-img.jpeg dist",
+    "copy-files": "npm run copy-img & npm run copy-assets & npm run copy-data",
+    "copy-host-files": "cp -r src/assets/host/* ./dist",
+    "start": "npm run clean-dist && parcel src/pug/pages/*.pug --open",
+    "build": "npm run clean-dist  && npm run copy-host-files && npm run copy-poster && parcel build src/pug/pages/*.pug"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-esbuild": "^2.6.0",
+    "@parcel/resolver-glob": "^2.6.0",
+    "@parcel/transformer-image": "^2.6.0",
+    "@parcel/transformer-jsonld": "^2.6.0",
+    "@parcel/transformer-pug": "^2.6.0",
+    "@parcel/transformer-sass": "^2.6.0",
+    "@parcel/transformer-webmanifest": "^2.6.0",
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.7",
+    "firebase-tools": "^11.0.1",
+    "parcel": "latest",
+    "parcel-plugin-metaimage": "^1.2.4",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-resolver-ignore": "^2.1.1",
+    "postcss": "^8.4.13",
+    "posthtml-img-autosize": "^0.1.6",
+    "posthtml-include": "^1.7.4",
+    "posthtml-modules": "^0.9.0",
+    "rsync": "^0.6.1",
+    "sass": "^1.52.2",
+    "scss": "^0.2.4",
+    "swiper": "^8.1.4"
+  },
+  "dependencies": {
+  },
+  "resolvers": {},
+  "parcelIgnore": [
+    "meta-img.jpg",
+    "privacy-policy.html",
+    "terms-conditions.html"
+  ]
+}

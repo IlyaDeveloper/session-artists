@@ -1,0 +1,25 @@
+-
+  var path = '../../'
+  var language = 'en'
+
+doctype html
+
+block core
+  include ../includes/vars
+  include  ../includes/ui/ui
+
+  if language === 'en'
+    include localization/eng
+
+html(lang=lang loading="true" translate="no")
+  head
+    include ../includes/head
+
+  body
+    block header
+      include ../includes/components/header
+
+    block content
+
+    block scripts
+      include ../includes/scripts

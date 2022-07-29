@@ -1,0 +1,186 @@
+//* Map size devices for media query
+$wideScreens: (
+  phonesSm: 340px,
+  phones: 480px,
+  phonesLg: 640px,
+  tablet: 768px,
+  laptop: 992px,
+  desktopSm: 1024px,
+  desktopMd: 1170px,
+  desktop: 1280px,
+  notebook: 1366px,
+  notebookLg: 1600px,
+  fullHD: 1800px,
+  retina: 2100px,
+  retina4k: 3656px,
+  retina5k: 5100px,
+  retina8k: 7600px
+);
+
+$contentScale: (
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(laptop),
+  //  scale: 89%
+  //),
+  (
+    direction: 'max-width',
+    wide: screens(phones),
+    scale: 92%
+  ), //(
+  //  direction: 'max-width',
+  //  wide: screens(phones),
+  //  scale: 80%
+  //),
+  //(
+  //  direction: 'min-width',
+  //  wide: screens(retina),
+  //  scale: 126%
+  //),
+);
+
+//* Main content && elements sizes
+$guides: false;
+$guidesBody: false;
+$guidesContainer: false;
+$guidesSideLine: true;
+$guidesContainerSpacer: true;
+$guidesContainerSpacerColor: rgba(lightgreen, 0.5);
+$guidesContainerOpacity: .6;
+$guidesCenter: true;
+$guides-color: #ff3e23;
+$guides-column: 12;
+
+$containerLimit: rem(1280);
+$containerOffset: calc(var(--container-gutter) * -1);
+$gutterSmall: var(--gutter-small, rem(8)) !default;
+$gutter: var(--gutter, rem(16)) !default;
+$gutterX2: var(--gutterX2, rem(24)) !default;
+$gutterX3: var(--gutterX3, rem(48)) !default;
+$gutterX4: var(--gutterX4, rem(96)) !default;
+$sectionSpacer: var(--section-spacer, rem(70)) !default;
+
+$radiusSmall: rem(6);
+$radius: rem(8);
+$radiusNormal: rem(16);
+$radiusLarge: rem(24);
+$radiusLargeHard: rem(48);
+
+$themes-map: (
+  default:(
+    primary: #00AFF0,
+    primary-dark: #0091ea,
+    secondary: #242529,
+    secondary-light: #8a96a3,
+    tertiary: #35D063,
+    //quaternary: #5645f3,
+    light: #ffffff,
+    light-dark:#fefefe,
+    dark: #242529,
+    border: rgba(138, 150, 163, 0.25),
+    //error: #ff0024,
+    //warning: #fffb53,
+    //success: #00FFBC
+  )
+);
+
+$primary: var(--cl-primary);
+$primary-dark: var(--cl-primary-dark);
+$secondary: var(--cl-secondary);
+$secondary-light: var(--cl-secondary-light);
+$tertiary: var(--cl-tertiary);
+
+
+$light: var(--cl-light);
+$light-dark: var(--cl-light);
+$dark: var(--cl-dark);
+
+$gr-primary: linear-gradient(var(--gr-primary, 112deg, $light -20%, var(--cl-primary-dark) 108%));
+
+//$error: var(--cl-error);
+//$warning: var(--cl-warning);
+//$success: var(--cl-success);
+
+$border-color: var(--cl-border);
+
+//* transitions && animations
+$transition-default: 0.44s linear !default;
+$transition-border: border-color $transition-default !default;
+$transition-shadow: box-shadow $transition-default !default;
+
+$transition-start-delay: var(--transition-start-delay, 1.8s);
+$transition-start-duration: var(--transition-start-duration, 1s);
+$global-animation-state: var(--gm-play-animation, paused);
+
+$transition-function: cubic-bezier(.2, .63, .59, .84); //cubic-bezier(0,.89,.36,1.22);
+$transition-function-card: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+$base-font-color: $secondary !default;
+$base-font-size: 16px !default;
+
+//$font-family-primary: 'Montserrat', sans-serif;
+$font-family-primary: 'SF Pro Rounded';
+//$font-family-alternative: 'Raleway', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+//$font-family-secondary: 'Public Sans', sans-serif; //'Halenoir Compact';
+
+// * shadows
+$sh-card-primary: var(--sh-card-primary, rem(6) rem(6) rem(16) rgba(138, 150, 163, 0.06));
+//* Icons
+$font-path: '../assets/fonts' !default;
+
+$icon-font-family: "session-artists-icons" !default;
+$icon-font-prefix: 'sai-';
+$icon-font-path: $font-path + '/#{$icon-font-family}' !default;
+
+$sai-arrow-left: "\e900";
+$sai-arrow-left1: "\e901";
+$sai-check: "\e902";
+$sai-close: "\e903";
+$sai-heart: "\e904";
+$sai-logo: "\e905";
+$sai-search: "\e906";
+$sai-soc-fb: "\e907";
+$sai-soc-inst: "\e908";
+$sai-soc-tw: "\e909";
+$sai-star: "\e90a";
+
+$icons-font-map: (
+  arrow-left: $sai-arrow-left,
+  arrow-left1: $sai-arrow-left1,
+  check: $sai-check,
+  close: $sai-close,
+  heart: $sai-heart,
+  logo: $sai-logo,
+  search: $sai-search,
+  soc-fb: $sai-soc-fb,
+  soc-inst: $sai-soc-inst,
+  soc-tw: $sai-soc-tw,
+  star: $sai-star
+);
+
+//* Scrolls
+$scroll-size: var(--scroll-size, rem(3));
+$scroll-border-radius: 0;
+$scroll-thumb-color: $border-color;
+$scroll-thumb-hover-color: $primary;
+$scroll-track-color: $light;
+$scroll-track-line: inset 0 0 0 0px $scroll-track-color;
+
+//* cursor
+$cursor-size: rem(30);
+$cursor-color: $secondary;
+$cursor-color-active: $primary;
+
+//* Loader
+$loader-size: rem(48);
+
+//* z-index
+$z-index-step: 10 !default;
+$z-index: (
+  start: 10,
+  middle: 50,
+  header: 100,
+  modal: 1000
+) !default;
+
+$layout-gutter: rem(20);

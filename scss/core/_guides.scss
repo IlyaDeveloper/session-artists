@@ -1,0 +1,120 @@
+//* css guides
+
+@if $guides {
+  @if $guidesBody {
+    body {
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+
+        height: 100vh;
+
+        content: '';
+
+        background-size: calc((100% / #{$guides-column}));
+        background-image: linear-gradient(
+            to right,
+            rgba($guides-color, 0.6) 0%,
+            rgba($guides-color, 0.6) 40%,
+            rgba(#ff3e23, 0) 40%,
+            rgba(255, 17, 0, 0) 60%,
+            rgba(255, 17, 0, 0) 60%,
+            rgba($guides-color, 0.6) 60%,
+            rgba($guides-color, 0.6) 100%
+        );
+      }
+    }
+  }
+
+  @if $guidesContainer {
+    .container {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+
+        height: 100vh;
+
+        content: '';
+
+        background-size: calc((100% / 12));
+        background-image: linear-gradient(
+            to right,
+            rgba($guides-color, 0.6) 0%,
+            rgba($guides-color, 0.6) 40%,
+            rgba(#ff3e23, 0) 40%,
+            rgba(255, 17, 0, 0) 60%,
+            rgba(255, 17, 0, 0) 60%,
+            rgba($guides-color, 0.6) 60%,
+            rgba($guides-color, 0.6) 100%
+        );
+
+        opacity: $guidesContainerOpacity;
+      }
+
+      box-shadow: inset var(--container-gutter) 0 0 0 $guidesContainerSpacerColor, inset calc(var(--container-gutter) * -1) 0 0 0 $guidesContainerSpacerColor;
+    }
+  }
+
+  @if $guidesSideLine {
+    .container {
+      position: relative;
+
+      //&:after {
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  right: 0;
+      //  z-index: -1;
+      //
+      //  height: 100vh;
+      //
+      //  content: '';
+      //
+      //  border: 1px solid $guides-color;
+      //  border-top: none;
+      //  border-bottom: 0;
+      //
+      //  opacity: $guidesContainerOpacity;
+      //}
+
+      border: 1px solid $guides-color;
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
+  @if $guidesContainerSpacer {
+    .container {
+      box-shadow: inset var(--container-gutter) 0 0 0 $guidesContainerSpacerColor, inset calc(var(--container-gutter) * -1) 0 0 0 $guidesContainerSpacerColor;
+    }
+  }
+
+  @if $guidesCenter {
+    body {
+      &:after {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        z-index: 10000;
+
+        width: rem(2);
+        height: 100vh;
+
+        content: '';
+
+        background: $guides-color;
+
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
