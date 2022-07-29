@@ -68,15 +68,15 @@ $radiusLargeHard: rem(48);
 
 $themes-map: (
   default:(
-    primary: #00AFF0,
-    primary-dark: #0091ea,
-    secondary: #242529,
+    primary: #007163,
+    primary-light: #007163B2,
+    primary-lighten: #0071631A,
+    secondary: #1A2535,
     secondary-light: #8a96a3,
-    tertiary: #35D063,
-    //quaternary: #5645f3,
+    tertiary: #A67C52,
     light: #ffffff,
-    light-dark:#fefefe,
-    dark: #242529,
+    light-dark:#F2F2F2,
+    dark: #000000,
     border: rgba(138, 150, 163, 0.25),
     //error: #ff0024,
     //warning: #fffb53,
@@ -95,11 +95,7 @@ $light: var(--cl-light);
 $light-dark: var(--cl-light);
 $dark: var(--cl-dark);
 
-$gr-primary: linear-gradient(var(--gr-primary, 112deg, $light -20%, var(--cl-primary-dark) 108%));
-
-//$error: var(--cl-error);
-//$warning: var(--cl-warning);
-//$success: var(--cl-success);
+$gr-primary: linear-gradient(0deg, rgba(0, 113, 99, 0.7), rgba(0, 113, 99, 0.7));
 
 $border-color: var(--cl-border);
 
